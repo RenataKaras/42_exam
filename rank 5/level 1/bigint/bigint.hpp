@@ -6,15 +6,16 @@
 /*   By: rkaras <rkaras@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/11/13 15:35:23 by rkaras        #+#    #+#                 */
-/*   Updated: 2025/11/13 17:20:30 by rkaras        ########   odam.nl         */
+/*   Updated: 2025/11/18 15:14:29 by rkaras        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef BIGINT_H
 #define BIGINT_H
 
-#include "iostream"
-#include "sstream"
+#include <iostream>
+#include <sstream>
+#include <algorithm>
 
 class bigint
 {
@@ -29,15 +30,25 @@ class bigint
 		~bigint();
 
 		std::string getStr() const;
+		unsigned int toUint() const;
 
 		//addition + +=
+		bigint &operator+=(const bigint &other);
+		bigint operator+(const bigint &other) const;
 
 		//increments ++x x++
+		bigint &operator++(); //++a;
+		bigint operator++(int); //a++;
 
 		//digshift << <<= >> >>=
+		bigint &operator<<=(const bigint &other);
+		bigint &operator>>=(const bigint &other);
+		bigint operator>>(const bigint &other);
+		bigint operator<<(const bigint &other);
+		
 		
 		//comparison == != > < <= >=
-		bool operator<(const bigint &other);
+		bool operator<(const bigint &other) const;
 		bool operator>(const bigint &other);
 		bool operator>=(const bigint &other);
 		bool operator<=(const bigint &other);

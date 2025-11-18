@@ -6,7 +6,7 @@
 /*   By: rkaras <rkaras@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2025/11/13 15:35:03 by rkaras        #+#    #+#                 */
-/*   Updated: 2025/11/13 15:35:05 by rkaras        ########   odam.nl         */
+/*   Updated: 2025/11/18 15:11:04 by rkaras        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int main()
     std::cout << "b = " << b << std::endl;
     std::cout << "++b = " << ++b << std::endl;
     std::cout << "b++ = " << b++ << std::endl;
-
+    
     std::cout << "(b << 10) + 42 = " << ((b << 10) + 42) << std::endl;
     std::cout << "(d <<= 4) = " << (d <<= 4) << std::endl;
     std::cout << "(d >>= 2) = " << (d >>= (const bigint)2) << std::endl;
