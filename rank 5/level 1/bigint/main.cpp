@@ -5,13 +5,12 @@
 /*                                                     +:+                    */
 /*   By: rkaras <rkaras@student.codam.nl>             +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2025/11/13 15:35:03 by rkaras        #+#    #+#                 */
-/*   Updated: 2025/11/18 15:11:04 by rkaras        ########   odam.nl         */
+/*   Created: 2025/11/18 16:10:17 by rkaras        #+#    #+#                 */
+/*   Updated: 2025/11/19 14:33:44 by rkaras        ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "bigint.hpp"
-#include <iostream>
 
 int main()
 {
@@ -30,10 +29,11 @@ int main()
     std::cout << "b = " << b << std::endl;
     std::cout << "++b = " << ++b << std::endl;
     std::cout << "b++ = " << b++ << std::endl;
-    
+    std::cout << "b = " << b << std::endl;
+
     std::cout << "(b << 10) + 42 = " << ((b << 10) + 42) << std::endl;
     std::cout << "(d <<= 4) = " << (d <<= 4) << std::endl;
-    std::cout << "(d >>= 2) = " << (d >>= (const bigint)2) << std::endl;
+    std::cout << "(e >>= 2) = " << (e >>= (const bigint)2) << std::endl;
 
     std::cout << "a =" << a << std::endl;
     std::cout << "d =" << d << std::endl;
