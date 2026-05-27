@@ -172,11 +172,11 @@ int	main(int argc, char **argv)
 		if (pen)
 			board[y][x] = 1;
 	}
-	while (iteration > 0)
-	{
-		step_life(board, width, height);
-		iteration--;
-	}
+	// while (iteration > 0)
+	// {
+	// 	step_life(board, width, height);
+	// 	iteration--;
+	// }
 	print_board(board, width, height);
 	free_board(board, height);
 	return (0);
